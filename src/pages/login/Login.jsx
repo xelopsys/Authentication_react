@@ -19,7 +19,7 @@ export default function Login() {
             dispatch({ type: "LOGIN", payload: user })
             navigate("/")
         }).catch((error) => {
-            setError(error.message)
+            setError(true)
         }
         )
     }
@@ -31,7 +31,7 @@ export default function Login() {
                 Login
             </h1>
             <form onSubmit={handleSubmit}>
-                <input type="email" name="email" placeholder='name' onChange={e => setEmail(e.target.value)} />
+                <input type="email" name="email" placeholder='email' onChange={e => setEmail(e.target.value)} />
                 <input type="password" name="password" placeholder='password' onChange={e => setPassword(e.target.value)} />
                 <button type="submit">Login</button>
                 {error && <span className="error">Wrong email or password</span>}

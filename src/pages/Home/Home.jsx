@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import Link from 'next/link'
 import { AuthContext } from '../../context/AuthContext'
 import { auth } from '../../firebase'
 import { signOut } from "firebase/auth";
@@ -22,15 +21,14 @@ export default function Home() {
     return (
         <div>
             <h1>Home</h1>
-            <Link to="/login" className="link">
-                <li style={{ padding: 0, margin: 0 }}>
-                    <button onClick={handleClick} >
 
-                        <span>Login out</span>
 
-                    </button>
-                </li>
-            </Link>
+            <button onClick={handleClick} >
+                <span>Login out</span>
+
+            </button>
+
+
         </div>
     )
 }

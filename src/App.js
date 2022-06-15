@@ -1,5 +1,5 @@
-import React, { Fragment, useContext } from 'react'
-import Login from './components/login/Login';
+import React, { useContext } from 'react'
+import Login from './pages/login/Login';
 import { AuthContext } from './context/AuthContext';
 import {
   BrowserRouter,
@@ -7,7 +7,7 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
-import Home from './components/Home/Home';
+import Home from './pages/Home/Home';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
   }
 
   return (
-    <Fragment>
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" >
@@ -32,7 +32,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </Fragment>
+    </div>
   );
 }
 
